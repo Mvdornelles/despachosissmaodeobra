@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/icon-192.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Despachos Inteligente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Polyfill for Promise.withResolvers
+      if (typeof Promise.withResolvers !== 'function') {
+        Promise.withResolvers = function () {
+          let resolve, reject;
+          const promise = new Promise((res, rej) => {
+            resolve = res;
+            reject = rej;
+          });
+          // These assertions are for type-checking in environments that understand JSDoc or TypeScript.
+          // @ts-ignore
+          return { promise, resolve, reject };
+        };
+      }
+    </script>
+    <script>
+      // Tailwind CSS custom configuration (optional)
+      // tailwind.config = {
+      //   theme: {
+      //     extend: {
+      //       colors: {
+      //         // example custom colors
+      //       }
+      //     }
+      //   }
+      // }
+    </script>
+    <!-- 
+      Tesseract.js core path. Depending on the tesseract.js version and setup, 
+      you might need to explicitly provide the corePath.
+      Modern versions often handle this automatically or via worker configuration.
+      If Tesseract.js has issues loading its core, uncomment and adjust path:
+    <script src="https://unpkg.com/tesseract.js-core@4.0.0-beta.1/tesseract-core.wasm.js"></script> 
+    -->
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-icons/": "https://esm.sh/react-icons@^5.5.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.2.0",
+    "pdfjs-dist": "https://esm.sh/pdfjs-dist@5.2.133",
+    "tesseract.js": "https://esm.sh/tesseract.js@^6.0.1",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.44.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

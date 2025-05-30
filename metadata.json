@@ -1,0 +1,6 @@
+{
+  "name": "Gerador de Despachos Inteligente Fix",
+  "description": "Fixes for the Intelligent Dispatch Generator application to resolve module export errors.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

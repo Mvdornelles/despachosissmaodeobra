@@ -1,0 +1,26 @@
+{
+  "name": "gerador-de-despachos-inteligente-fix",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@google/genai": "^1.2.0",
+    "@google/generative-ai": "^0.24.1",
+    "@supabase/supabase-js": "^2.44.4",
+    "pdfjs-dist": "5.2.133",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "tesseract.js": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
+  }
+}
