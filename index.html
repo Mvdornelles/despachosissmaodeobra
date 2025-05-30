@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/icon-192.svg" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="/public/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gerador de Despachos Inteligente</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       // Polyfill for Promise.withResolvers
       if (typeof Promise.withResolvers !== 'function') {
@@ -21,18 +20,6 @@
           return { promise, resolve, reject };
         };
       }
-    </script>
-    <script>
-      // Tailwind CSS custom configuration (optional)
-      // tailwind.config = {
-      //   theme: {
-      //     extend: {
-      //       colors: {
-      //         // example custom colors
-      //       }
-      //     }
-      //   }
-      // }
     </script>
     <!-- 
       Tesseract.js core path. Depending on the tesseract.js version and setup, 
@@ -55,7 +42,7 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+<link rel="stylesheet" href="/src/index.css">
 </head>
   <body class="bg-slate-100">
     <div id="root"></div>
